@@ -16,6 +16,8 @@ def isItAWord(word):
         return "Error: No Word! (Error Code: 0x589dfff)"
 def toEng():
     original = getInput()
+    if not (original[len(original)-2:len(original)] == "ay"):
+        print "It seems like you've entered English, not Pyglatin! No problem, here's your word:"
     word = original[:len(original)-2].lower() # Get word without suffix + lowercase
     firstLetter = word[len(word)-1] # Get (the real) first letter
     word = firstLetter + word[:len(word)-1]# First letter + word - first letter - suffix
@@ -24,6 +26,8 @@ def toEng():
 
 def toPyg():
     original = getInput()
+    if (original[len(original)-2:len(original)] == "ay"):
+        print "It seems like you've entered Pyglatin, not English! No problem, here's your word:"
     word = original+original[0].lower()+suffix # Define Base + first to lowercase
     word = word[1:len(word)] # Get rid of the first first letter
     piggy = firstUp(original, word) # First letter to upper?
