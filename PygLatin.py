@@ -23,7 +23,7 @@ def toEng():
     return isItAWord(piggy)
 
 def toPyg():
-    original = isItAWord(getInput())
+    original = getInput()
     word = original+original[0].lower()+suffix # Define Base + first to lowercase
     word = word[1:len(word)] # Get rid of the first first letter
     piggy = firstUp(original, word) # First letter to upper?
