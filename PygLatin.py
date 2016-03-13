@@ -29,10 +29,10 @@ def toPyg():
     piggy = firstUp(original, word) # First letter to upper?
     return isItAWord(piggy)
 
-whatToDo = raw_input("Do you want to translate from PygLatin to English (1) or from English to PygLatin (2)?") # What should I do?!?
+whatToDo = raw_input("Do you want to translate from English to PygLatin (1) or from PygLatin to English (2)?") # What should I do?!?
 if whatToDo == "1":
-        print toEng()
-elif whatToDo == "2":
         print toPyg()
+elif whatToDo == "2":
+        print toEng()
 else:
     print "Error: There is no other choice! (Error Code: 0x132dfaa)"
